@@ -5,6 +5,10 @@ import store from './store';
 
 import App from './app';
 
+if (navigator.serviceWorker) {
+	navigator.serviceWorker.register('/sw.js');
+}
+
 render(
 	<Provider store={store}>
 		<App />

@@ -5,7 +5,7 @@ export const GET_POKEMON_BY_ID_SUCCESS = '[API] Get Pokemon By Id Success';
 
 export function GetPokemons(url = null) {
 	return (dispatch) =>
-		fetch(url ? url : 'http://pokeapi.salestock.net/api/v2/pokemon').then((res) => res.json()).then((pokemons) => {
+		fetch(url ? url : 'http://pokeapi.salestock.net/api/v2/pokemon/').then((res) => res.json()).then((pokemons) => {
 			dispatch(GetPokemonsSuccess(pokemons));
 			return pokemons;
 		});
